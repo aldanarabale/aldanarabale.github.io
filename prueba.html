@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos con Cuadros de Texto</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+            overflow: hidden; /* Evita barras de desplazamiento durante la lluvia */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Espacio entre las filas */
+        }
+
+        .image-text-row {
+            display: flex;
+            align-items: center;
+            background: #ffffff; /* Fondo blanco para cada fila */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+            padding: 15px;
+            cursor: pointer; /* Cambia el cursor al pasar sobre la fila */
+        }
+
+        .image-text-row img {
+            margin-right: 20px; /* Espacio entre la imagen y el cuadro de texto */
+            max-width: 300px;   /* Tamaño máximo de la imagen ampliado */
+            height: auto;       /* Mantener proporciones */
+            border-radius: 10px; /* Bordes redondeados para la imagen */
+            border: 2px solid #d0e1f9; /* Borde de color celeste claro */
+        }
+
+        .image-text-row textarea {
+            width: 100%;
+            height: 150px; /* Altura del cuadro de texto ajustada */
+            padding: 15px;
+            font-size: 16px;
+            resize: none; /* Eliminar la opción de redimensionar */
+            border: none; /* Sin bordes */
+            border-radius: 10px; /* Bordes redondeados */
+            background: linear-gradient(135deg, #a0c4ff, #cae8ff); /* Degradado de color celeste */
+            color: #333; /* Color del texto */
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra interior para dar profundidad */
+            transition: box-shadow 0.3s ease;
+        }
+
+        .image-text-row textarea:focus {
+            outline: none;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra más intensa al hacer foco */
+        }
+
+        .heart, .dino {
+            position: absolute;
+            width: 40px; /* Tamaño de los corazones y dinosaurios */
+            height: 40px;
+            animation: fall 5s linear infinite; /* Animación más lenta */
+            z-index: 9999;
+        }
+
+        .heart {
+            background-color: red;
+            transform: rotate(-45deg);
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -20px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: 20px;
+        }
+
+        .dino {
+            background-image: url(dinoo.jpg); /* Imagen del dinosaurio */
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(800px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Te amo en todas tus formas mi niño</h1>
+<div class="container">
+    <div class="image-text-row" onclick="createHeartsAndDinos(event)">
+        <img src="IMG-20240714-WA0188.jpg" alt="Imagen 1">
+        <textarea placeholder="Texto para Imagen 1...">ASI DE SONRIENTE TE AMOOOOOO</textarea>
+    </div>
+    <div class="image-text-row" onclick="createHeartsAndDinos(event)">
+        <img src="tuya 16.jpg" alt="Imagen 2">
+        <textarea placeholder="Texto para Imagen 2...">Ese dia tu cara de sorpresa me enamoro mucho mas </textarea>
+    </div>
+    <div class="image-text-row" onclick="createHeartsAndDinos(event)"></div>
+        <img src="" alt="Imagen 3">
+        <textarea placeholder="Texto para Imagen 3..."> tu sonrisa pura me enamoro</textarea>
+    </div>
+    <div class="image-text-row" onclick="createHeartsAndDinos(event)">
+        <img src="tuya10.jpg" alt="Imagen 4">
+        <textarea placeholder="Texto para Imagen 4...">siempre que te compras algo tequeda super bien </textarea>
+    </div>
+    <div class="image-text-row" onclick="createHeartsAndDinos(event)"></div>
+        <img src="tuya13.jpg" alt="Imagen 5">
+        <textarea placeholder="Texto para Imagen 5...">aunque te hagas el serio se que me amas y yo te amo mucho mas, sabes que por mas serio que seas seras mi niño chiquito y adorado</textarea>
+    </div>
+    <div class="image-text-row" onclick="createHeartsAndDinos(event)">
+        <img src="tuya2.jpg" alt="Imagen 6">
+        <textarea placeholder="Texto para Imagen 6...">realmente ese dia me senti muy especial por tenerte a mi lado y ver que una navidad pudiste tener algo mio acompañandote</textarea>
+    </div>
+    <div class="image-text-row" onclick="createHeartsAndDinos(event)">
+        <img src="tuya3.jpg" alt="Imagen 7">
+        <textarea placeholder="Texto para Imagen 7...">pero envidia de tu almoada y tus sabanas al acompañerte..</textarea>
+    </div>
+    <div class="image-text-row" onclick="createHeartsAndDinos(event)">
+        <img src="tuya4.jpg" alt="Imagen 8">
+        <textarea placeholder="Texto para Imagen 8...">y esta foto me gusto mucho tu sonrisa y tu mirada dulce me encanto </textarea>
+    </div>
+    <div class="image-text-row" onclick="createHeartsAndDinos(event)">
+        <img src="tuya5.jpg" alt="Imagen 9">
+        <textarea placeholder="Texto para Imagen 9..."> spero siempre poder verte haciendo lo que te gusta y disfrutando el dia de vida que te da el sol </textarea>
+    </div>
+    <div class="image-text-row" onclick="createHeartsAndDinos(event)">
+        <img src="tuya6.jpg" alt="Imagen 10">
+        <textarea placeholder="Texto para Imagen 10...">siempre que vea tu perfil me enamorare mas, porque desde el puedo verte sonreir y tus largas pestañas ademas de tu preciosa mirada al voltearme a ve</textarea>
+    </div>
+    <div class="image-text-row" onclick="createHeartsAndDinos(event)"></div>
+        <img src="tuya7.jpg" alt="Imagen 11">
+        <textarea placeholder="Texto para Imagen 11...">cada locura que haces me encanta</textarea>
+    </div>
+    <div class="image-text-row" onclick="createHeartsAndDinos(event)">
+        <img src="tuya8.jpg" alt="Imagen 11">
+        <textarea placeholder="Texto para Imagen 11...">y como no amarte desde pequeño?</textarea>
+    </div>
+    <div class="image-text-row" onclick="createHeartsAndDinos(event)">
+        <img src="tuya9.jpg" alt="Imagen 11">
+        <textarea placeholder="Texto para Imagen 11..."> realme estoy enamorada de esa sonrisa tan dulce y alere que tenes</textarea>
+    </div>
+ 
+</div>
+<script>
+    function createHeartsAndDinos(event) {
+        for (let i = 0; i < 30; i++) {
+            setTimeout(() => {
+                const isDino = Math.random() > 0.5;
+                const element = document.createElement('div');
+                element.className = isDino ? 'dino' : 'heart';
+                element.style.left = `${event.clientX}px`;
+                element.style.top = `${event.clientY}px`;
+                element.style.animationDuration = `${Math.random() * 5 + 3}s`; /* Animación más lenta */
+                element.style.opacity = Math.random();
+                element.style.transform = `scale(${Math.random()}) translateX(${Math.random() * 50 - 25}px)`;
+                document.body.appendChild(element);
+
+                setTimeout(() => {
+                    element.remove();
+                }, 7000);
+            }, i * 100);
+        }
+    }
+</script>
+</body>
+</html>

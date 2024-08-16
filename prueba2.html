@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes con Enlaces de Spotify y Texto Estético</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+            cursor: url('ruta_del_cursor_corazon.png'), auto; /* Cambia el cursor al hacer clic */
+            text-align: center;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .image-item {
+            text-align: center;
+        }
+
+        .image-item img {
+            width: 150px; /* Tamaño de las imágenes */
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #d0e1f9; /* Borde de color celeste claro */
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .image-item img:hover {
+            transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+        }
+
+        .image-title {
+            margin-top: 10px;
+            padding: 10px;
+            background: linear-gradient(135deg, #a0c4ff, #cae8ff); /* Degradado celeste */
+            border-radius: 10px;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+        }
+    </style>
+</head>
+<body>
+<h1>toca las fotosss</h1>
+<div class="image-container">
+    <div class="image-item">
+        <img src="linda (2).jpg" alt="Imagen 1" onclick="openSpotify('https://open.spotify.com/intl-es/track/60IzIxSuVAtU71yCmHjxHH?si=b24d78a971cf4b61')">
+        <div class="image-title">Sera por mi por ti</div>
+    </div>
+    <div class="image-item">
+        <img src="linda (3).jpg" alt="Imagen 2" onclick="openSpotify('https://open.spotify.com/intl-es/track/7Ji2e01og2QOFBd8mnVF8L?si=46d13eb90cf8457d')">
+        <div class="image-title">tus vueltas siempre me cautivarion y verte bailando aun mas </div>
+    </div>
+    <div class="image-item">
+        <img src="linda 21.jpg" alt="Imagen 3" onclick="openSpotify('https://open.spotify.com/intl-es/track/75UMtPC77vqKRwfSuYuNPO?si=9be3f6925ae94fc0')">
+        <div class="image-title">nos iremos a nuestro propio San lucas...</div>
+    </div>
+    <div class="image-item">
+        <img src="linda.jpg" alt="Imagen 4" onclick="openSpotify('https://open.spotify.com/intl-es/track/4ZLzoOkj0MPWrTLvooIuaa?si=35bbc1487d654da0')">
+        <div class="image-title"> te daria la luna si fuera necesario</div>
+    </div>
+    <div class="image-item">
+        <img src="linda10.jpg" alt="Imagen 5" onclick="openSpotify('https://open.spotify.com/intl-es/track/2tpWsVSb9UEmDRxAl1zhX1?si=e87cf77faf7641b7')">
+        <div class="image-title"> y si contamos estrellas?</div>
+    </div>
+    <div class="image-item">
+        <img src="linda11.jpg" alt="Imagen 6" onclick="openSpotify('https://open.spotify.com/intl-es/track/1SKPmfSYaPsETbRHaiA18G?si=7d4cf97cdd8e4903')">
+        <div class="image-title"> descansemos en el lugar que solamente nosotros conocemos</div>
+    </div>
+    <div class="image-item">
+        <img src="linda12.jpg" alt="Imagen 7" onclick="openSpotify('https://open.spotify.com/intl-es/track/1V6gIisPpYqgFeWbMLI0bA?si=fcb74309e0a440e1')">
+        <div class="image-title">por mas que intente me hiciste brillar y me senti asi:</div>
+    </div>
+    <div class="image-item">
+        <img src="linda13.jpg" alt="Imagen 8" onclick="openSpotify('https://open.spotify.com/intl-es/track/6O20JhBJPePEkBdrB5sqRx?si=2c57ef0326264d93')">
+        <div class="image-title">brillaremos como diamantes en el cielo </div>
+    </div>
+    <div class="image-item">
+        <img src="linda14.webp" alt="Imagen 9" onclick="openSpotify('https://open.spotify.com/intl-es/track/6Z8R6UsFuGXGtiIxiD8ISb?si=86009dc917e8434e')">
+        <div class="image-title">se que estaremos seguros </div>
+    </div>
+    <div class="image-item">
+        <img src="linda15.jpg" alt="Imagen 10" onclick="openSpotify('https://open.spotify.com/intl-es/track/57Ba26w9eoXx8BBUNgRNLV?si=a42fc60336544345')">
+        <div class="image-title">en esa mirada estaba segura </div>
+    </div>
+</div>
+
+<script>
+    function openSpotify(url) {
+        window.open(url, '_blank'); // Abre el enlace en una nueva pestaña
+    }
+</script>
+
+</body>
+</html>
