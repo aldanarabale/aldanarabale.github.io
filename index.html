@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un mimo a distancia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #a2c8e5; /* Color celeste claro */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #8ab8d7; /* Color celeste más oscuro para el hover */
+            transform: scale(1.05);
+        }
+
+        .navbar a:active {
+            background-color: #6e9bb2; /* Color celeste aún más oscuro al hacer clic */
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 800px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 24px;
+            z-index: 1;
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-control:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="un recuerdito.html">un recuerdito</a>
+        <a href="prueba.html">fotos lindasss</a>
+        <a href="prueba2.html">fotos tuyas</a>
+        <a href="prueba 3.html">fotos graciosas</a>
+    </div>
+
+    <div class="container">
+        <h1>¡FELIZ CUMPLEAÑOS MI AMOOOOOOR!</h1>
+        <p>nosotros remil lindos</p>
+
+        <div class="carousel-container">
+            <div class="carousel-slides">
+                <div class="carousel-slide">
+                    <img src="IMG-20211026-WA0012-COLLAGE.jpg" alt="Imagen 1">
+                    <div class="carousel-caption">te amo </div> 
+                </div>
+                <div class="carousel-slide">
+                    <img src="2.jpg" alt="Imagen 2">
+             
+                </div>
+                <div class="carousel-slide">
+                    <img src="3.jpg" alt="Imagen 3">
+                
+                </div>
+            </div>
+            <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelector('.carousel-slides');
+            const totalSlides = document.querySelectorAll('.carousel-slide').length;
+            if (index >= totalSlides) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = totalSlides - 1;
+            } else {
+                currentSlide = index;
+            }
+            slides.style.transform = `translateX(${-currentSlide * 100}%)`;
+        }
+
+        function moveSlide(step) {
+            showSlide(currentSlide + step);
+        }
+
+        // Inicializar mostrando la primera diapositiva
+        showSlide(currentSlide);
+    </script>
+
+</body>
+</html>
